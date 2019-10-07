@@ -9,9 +9,6 @@ include "header.php";
             <a class="btn btn-success" href="add.php">Add Employee</a>
             <a class="btn btn-info pull-right" href="index.php">Back</a>
         </h2>
-
-
-
         <div class="panel panel-body">
                 <table class="table table-striped">
                     <tr>

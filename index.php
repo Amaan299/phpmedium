@@ -81,7 +81,7 @@ if(isset($_POST["submit"])) {
                         <th>Attendance</th>
                     </tr>
                     <?php
-                    $show = "SELECT * FROM employee";
+                    $show = "SELECT * FROM employee WHERE designation='developer'";
                     $r = $conn->prepare($show);
                     $r->execute();
                     $count = 0;
