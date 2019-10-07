@@ -66,7 +66,7 @@ if(isset($_POST["submit"])) {
         </h2>
         <h2>
             <div class="well text-center">
-                Date:<?php echo  date(" Y-m-d")?>
+                Date:<?php echo  date(" Y-m-d")?> <!-- date(" H:m:s")-->
             </div>
         </h2>
 
@@ -85,7 +85,7 @@ if(isset($_POST["submit"])) {
 
                     </tr>
                     <?php
-                    $show = "SELECT * FROM employee";
+                    $show = "SELECT * FROM employee WHERE designation='hr'";
                     $r = $conn->prepare($show);
                     $r->execute();
                     $count = 0;
