@@ -44,6 +44,8 @@ if(isset($_POST["submit"])) {
 }
 
 ?>
+<html>
+<body>
 <div class="panel panel-default">
     <div class="panel panel-heading">
         <h2>
@@ -82,7 +84,6 @@ if(isset($_POST["submit"])) {
                         <th>Profile</th>
                         <th>Boss</th>
                         <th>Designation</th>
-
                     </tr>
                     <?php
                     $show = "SELECT * FROM employee WHERE designation='hr'";
@@ -111,7 +112,6 @@ if(isset($_POST["submit"])) {
                             <td> <?php echo $row['designation']; ?>
                                 <input type="hidden" value="<?php echo $row['designation'];?>" name="designation[]">
                             </td>
-
                         </tr>
                         <?php
                         $count++;
@@ -125,3 +125,5 @@ if(isset($_POST["submit"])) {
 
     </div>
 </div>
+</body>
+</html>
