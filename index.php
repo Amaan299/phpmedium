@@ -11,7 +11,6 @@ if(isset($_POST["submit"])) {
 
     $num = $records->rowCount();
 
-    if ($num!=0) {
 
         foreach ($_POST["attend_status"] as $id => $attend_status) {
             $name = $_POST["name"][$id];
@@ -22,16 +21,6 @@ if(isset($_POST["submit"])) {
             $designation = $_POST["designation"][$id];
             $date = date("Y-m-d");
 
-            $sql = "UPDATE attend_records SET emp_name = '" . $_POST["name"][$id] . "', department = '" . $_POST["department"][$id] . "', salary = '" . $_POST["salary"][$id] . "',
-            profile = '" . $_POST["profile"][$id] . "', boss = '" . $_POST["boss"][$id] . "' , designation = '" . $_POST["designation"][$id] . "', attendance = '" . $_POST["attend_status"][$id] . "' , my_date = '$date'
-            WHERE my_date = '$date'";
-            $result = $conn->exec($sql);
-            if ($result) {
-                $update = 1;
-            }
-        }
-    } else {
-        foreach ($_POST["attend_status"] as $id => $attend_status) {
             $sql = "INSERT INTO attend_records (emp_name, department, salary, profile, boss, designation,attendance,my_date)
             VALUES ('" . $_POST["name"][$id] . "','" . $_POST["department"][$id] . "','" . $_POST["salary"][$id] . "','" . $_POST["profile"][$id] . "','" . $_POST["boss"][$id] . "','" . $_POST["designation"][$id] . "','" . $_POST["attend_status"][$id] . "','$date')";
             $result = $conn->exec($sql);
@@ -40,7 +29,6 @@ if(isset($_POST["submit"])) {
                 $flag = 1;
             }
         }
-    }
 }
 
 ?>

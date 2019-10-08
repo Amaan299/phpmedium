@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3f933a8-9b4d-4326-908a-c5b24de70b88" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/auto_sync.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/insertTime.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testmail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/developer.php" beforeDir="false" afterPath="$PROJECT_DIR$/developer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/view_all.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,7 +25,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SimpleAttendanceRecord_PHP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,6 +76,7 @@
       <workItem from="1570090489471" duration="3183000" />
       <workItem from="1570163433324" duration="11973000" />
       <workItem from="1570427786236" duration="4384000" />
+      <workItem from="1570504944677" duration="22288000" />
     </task>
     <servers />
   </component>
