@@ -24,7 +24,6 @@ include "header.php";
                     <?php
 
                     $show = "SELECT * FROM my_time";
-
                     $r = $conn->prepare($show);
 
                     $r->execute();

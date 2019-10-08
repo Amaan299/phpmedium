@@ -1,30 +1,35 @@
 <?php
 include "header.php";
+include "db.php";
 ?>
 <html>
 <head>
 
 </head>
 <body>
-<h2>Click to mark Attendance of Date:<?php echo date("d-m-Y")?></h2>
-<div class="container">
+<button class="btn btn-info" onclick="move()">View Attendance</button>
+<h2>Mark Attendance of Date:<?php echo date("d-m-Y")?></h2>
+
+
         <h1>Login</h1>
         <button type="submit" name="timein" class="btn btn-success form-control" onclick="timein()">Mark Time in</button><br/>
-        <div id="timein"></div>
+        <div ><h2 id="timein"></h2></div>
         <button type="submit" name="timeout" class="btn btn-danger form-control" onclick="timeout()">Mark Time out</button><br/>
-        <div id="timeout"></div>
-        <button type="submit" name="save" class="btn btn-info form-control" onclick="closeForm()">Save</button>
-</div>
-</div>
+        <div ><h2 id="timeout"></h2></div>
+    <form action="insertTime.php" method="POST">
+        <input type="hidden" value="<?php echo date("H:i:s") ?>" name="timeout">
+        <input type="hidden" value="<?php echo date("H:i:s") ?>" name="timein">
+        <button type="submit" name="save" class="btn btn-info form-control">Save</button>
+    </form>
 <script>
     function timein() {
-        document.getElementById("timein").innerText = "<?php echo date("h:i:s");?>"
+        document.getElementById("timein").innerText = "<?php echo date("H:i:s");?>"
     }
     function timeout() {
-        document.getElementById("timeout").innerText = "<?php echo date("h:i:s");?>"
+        document.getElementById("timeout").innerText = "<?php echo date("H:i:s");?>"
     }
-    function closeForm() {
-       window.location.replace('insertTime.php');
+    function move() {
+        window.location.replace("view_attend.php");
     }
 </script>
 </body>

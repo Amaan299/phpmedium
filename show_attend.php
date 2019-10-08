@@ -1,14 +1,14 @@
 <?php
 include "db.php";
 include "header.php";
-
+$date = $_POST['my_date'];
 
 ?>
 <div class="panel panel-default">
     <div class="panel panel-heading">
         <h2>
             <a class="btn btn-success" href="add.php">Add Employee</a>
-            <a class="btn btn-info pull-right" href="index.php">Back</a>
+            <a class="btn btn-info pull-right" href="view_all.php">Back</a>
         </h2>
         <h2>
             <div class="well text-center">
@@ -30,12 +30,12 @@ include "header.php";
                         <th>Attendance</th>
                     </tr>
                     <?php
-                    $da = $_POST["my_date"];
-                    $show = "SELECT * FROM Attendance.attend_records WHERE my_date='$da'";
+
+                    $show = "SELECT DISTINCT id, emp_name,department,salary,profile,boss,designation,attendance
+                                FROM attend_records WHERE my_date='$date'";
                     $r = $conn->prepare($show);
 
                     $r->execute();
-                    $count = 0;
                     while ($row = $r->fetch(PDO::FETCH_ASSOC)){
                         ?>
                         <tr>
@@ -56,7 +56,6 @@ include "header.php";
                             </td>
                         </tr>
                         <?php
-                        $count++;
                     }
                     ?>
                 </table>

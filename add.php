@@ -6,8 +6,8 @@ try {
     if(isset($_POST["submit"])){
         $sql = "INSERT INTO employee (emp_name, department, salary, profile, boss, designation)
         VALUES ('".$_POST["name"]."','".$_POST["department"]."','".$_POST["salary"]."','".$_POST["profile"]."','".$_POST["boss"]."','".$_POST["designation"]."')";
-        $result = $conn->exec($sql);
 
+        $result = $conn->exec($sql);
 
         header("Location: index.php");
     }
